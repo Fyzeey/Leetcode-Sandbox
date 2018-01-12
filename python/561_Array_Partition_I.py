@@ -24,3 +24,5 @@ class Solution(object):
         # list.sort() mutate original list, if you want to return a new sorted list, use sorted() function instead
         nums.sort()
         return sum(nums[::2])
+    
+# For optimal solution, visit https://leetcode.com/problems/array-partition-i/discuss/102201
