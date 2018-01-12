@@ -40,4 +40,13 @@ class Solution(object):
         else:
             return False
             
-# Here is legit python one-line solution using count()function
+# Here is legit python one-line solution using count()function 
+# This solution doesn't need to assignment any value to move operation
+class Solution(object):
+    def judgeCircle(self, moves):
+        """
+        :type moves: str
+        :rtype: bool
+        """
+        
+        return moves.count("U") == moves.count("D") and moves.count("L") == moves.count("R")
