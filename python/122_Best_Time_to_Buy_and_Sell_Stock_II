@@ -1,0 +1,20 @@
+"""
+Say you have an array for which the ith element is the price of a given stock on day i.
+
+Design an algorithm to find the maximum profit. 
+You may complete as many transactions as you like (ie, buy one and sell one share of the stock multiple times). 
+However, you may not engage in multiple transactions at the same time (ie, you must sell the stock before you buy again).
+"""
+
+#以相邻的2天为一组，只要day i+1 比 day i 价格高， 那么就day i卖出 day i+1 再买进, hold one transaction condition.
+class Solution(object):
+    def maxProfit(self, prices):
+        """
+        :type prices: List[int]
+        :rtype: int
+        """
+        res = []
+        for index in range(len(prices ) -1):
+            res.append(max((prices[index+1] - prices[index]), 0))
+        
+        return sum(res)
