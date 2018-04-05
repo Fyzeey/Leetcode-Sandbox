@@ -13,7 +13,7 @@ return [0, 1].
 # 这题用dictionary来存value和index，key和key.value相加等于target
 # 以[2,7,11,15], target = 9 为例
 # mydic = {
-#   "7": 2
+#   "7": 0
 # }
 class Solution(object):
     def twoSum(self, nums, target):
